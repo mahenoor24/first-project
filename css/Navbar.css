@@ -1,0 +1,234 @@
+.navbar {
+    
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    padding: 20px 100px;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: 0px 3px 67px 0px rgba(0, 0, 0, 0.212);
+}
+.nav-links{
+    color: #173875;
+}
+/* .navbar.active{
+    background-color: #fff;
+    box-shadow: 0px 3px 67px 0px rgba(0,0,0,.15);
+}
+.navbar.active .nav-links{
+    color: #173875;
+} */
+.nav-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1800px;
+}
+
+.nav-logo {
+    color: #f5b921;
+    align-items: center;
+    /* margin-left: 20px; */
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    flex-grow: 1;
+    padding-bottom: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    
+}
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+}
+.nav-links a{
+    text-decoration: none;
+}
+.nav-links:hover{
+    text-decoration: none;
+    color: #173875;
+}
+.fa-code {
+    margin-left: 1rem;
+}
+
+.nav-item {
+    line-height: 40px;
+    margin-right: 1rem;
+}
+#dropdownStyle{
+    left: "-100px" !important;
+}
+/*
+.modal {
+    text-align: center;
+    padding: 37px;
+    background-color: white;
+    margin-left: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 65px 0px rgb(0 0 0 / 15%);
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+    outline: 0;
+} */
+.modal h2 {
+    color: #57bae9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 30px;
+    padding: 10px;
+}
+.modal form {
+    outline: none;
+    border: none;
+}
+/*
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}*/
+.modal form input {
+    border-radius: 5px;
+}
+input, textarea {
+    background-color: #f9f9f9;
+    outline: 0;
+    border: 1px solid #f1f1f1;
+    padding: 10px 20px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+.modal form button {
+    color: white;
+    background-color: rgb(0, 103, 224);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+/* .nav-item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  } */
+
+
+/* .nav-item:hover:after {
+    width: 100%;
+    background: #ffdd40;
+  } */
+
+
+/* .nav-item .active {
+    color: #ffdd40;
+    border: 1px solid #ffdd40;
+  } */
+
+.nav-icon {
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    #dropdownStyle{
+        left: 0 !important;
+    }
+    .modal {
+        margin-left: 0%;
+    }
+    .nav-menu .dropdown{
+        display: none;
+    }
+}
+@media screen and (max-width: 960px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        border-bottom: #173875;
+        width: 100%;
+        border-top: 1pxsolid #fff;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav-menu.active {
+        background: #fff;
+        border-top:  2px solid #ff6600 ;
+        border-bottom: 2px solid #ff6600;
+        margin: 0% !important;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .nav-item .active {
+        color: #ff6600;
+        border: none;
+    }
+    .nav-links {
+        color: #173875;
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
+        margin-left: -20px;
+    }
+    .nav-tabs .nav-link {
+        border: 1px solid black;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+    }
+    .nav-icon {
+        display: block;
+        margin-top: -60px;
+        margin-left: 10px;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #f86604;
+    }
+}
